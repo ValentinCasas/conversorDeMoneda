@@ -18,6 +18,7 @@ public class MainActivityViewModel extends AndroidViewModel {
     private Context context;
     private Intent intent;
     private MutableLiveData<String> resultado = new MutableLiveData<>();
+
     private Double tasaCambio = 1.19;
 
     public MainActivityViewModel(@NonNull Application application) {

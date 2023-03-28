@@ -32,9 +32,26 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+        binding.rbDolaresAEuros.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                binding.etEuros.setEnabled(false);
+                binding.etDolares.setEnabled(true);
+            }
+        });
+
+        binding.rbEurosADolares.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                binding.etDolares.setEnabled(false);
+                binding.etEuros.setEnabled(true);
+            }
+        });
+
         binding.buttonConversion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 mv.convertir(binding.rbEurosADolares.isChecked(), binding.rbDolaresAEuros.isChecked(),
                         binding.etEuros.getText().toString(), binding.etDolares.getText().toString());
             }
